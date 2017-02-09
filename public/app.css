@@ -1,0 +1,293 @@
+body {
+    background-color: #fafafa;
+    color: #757575;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+button {
+    background: 0 0;
+    border: none;
+    border-radius: 2px;
+    color: #757575;
+    position: relative;
+    height: 36px;
+    margin: 0;
+    min-width: 64px;
+    padding: 0 16px;
+    display: inline-block;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    overflow: hidden;
+    will-change: box-shadow;
+    transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    line-height: 36px;
+    vertical-align: middle;
+}
+
+button:hover {
+    background-color: rgba(158,158,158,.2);
+}
+
+button:active {
+    background-color: rgba(158,158,158,.4);
+}
+
+button:disabled {
+    color: rgba(0, 0, 0, 0.26);
+    pointer-events: none;
+}
+
+button.icon {
+    border-radius: 50%;
+    font-size: 24px;
+    height: 32px;
+    margin-left: 0;
+    margin-right: 0;
+    min-width: 32px;
+    width: 32px;
+    padding: 0;
+    overflow: hidden;
+    line-height: normal;
+}
+
+button .material-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-12px,-12px);
+    line-height: 24px;
+    width: 24px;
+    vertical-align: middle;
+}
+
+input {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #757575;
+    padding: .5em;
+    border-radius: 2px;
+    border: 1px solid lightgray;
+    outline: none;
+}
+
+main {
+    background: #fff;
+    width: 700px;
+    margin: 50px auto;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    color: white;
+    background-color: #222;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header h1 {
+    display: inline-block;
+    color: #764abc;
+    margin: 1rem auto;
+}
+
+
+
+/* Stats */
+.stats {
+    margin: 10px;
+}
+
+.stats table {
+    margin: auto;
+}
+
+.stats th {
+    text-align: right;
+    font-weight: normal;
+    letter-spacing: 2px;
+    font-size: .7em;
+}
+
+.stats td {
+    text-align: left;
+    font-size: 1.5rem;
+    font-family: monospace;
+}
+
+
+
+/* Stopwatch */
+.stopwatch {
+    padding: 15px 10px 5px 10px;
+}
+
+.stopwatch-time {
+    font-family: monospace;
+    font-size: 2em;
+}
+
+.stopwatch-controls button {
+    margin: 5px;
+    color: white;
+}
+
+
+
+/* Filter */
+.todo-filter {
+    display: flex;
+}
+
+.todo-filter a {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.todo-filter a:hover {
+    background-color: rgba(158,158,158,.1);
+}
+
+.todo-filter a.is-active i {
+    color: #764abc;
+}
+
+.todo-filter a.is-active::after {
+    height: 2px;
+    width: 100%;
+    display: block;
+    content: " ";
+    bottom: -1px;
+    left: 0;
+    position: absolute;
+    background: #764abc;
+}
+
+
+/* Todo */
+.todo {
+    display: flex;
+    font-size: 1rem;
+    border-top: 1px solid rgba(0,0,0,.1);
+    background-color: #fff;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 1em;
+    align-items: center;
+}
+
+.todo.completed * {
+    color: lightgray;
+    transition: color .2s;
+}
+
+.todo.completed .todo-title {
+    text-decoration: line-through;
+}
+
+.todo .todo-title {
+    margin-right: auto;
+}
+
+.todo .checkbox {
+    margin-right: .5rem;
+}
+
+.todo button:not(.checkbox) {
+    opacity: 0;
+    transition: all .2s;
+}
+
+.todo:hover button:not(.checkbox) {
+    opacity: 1;
+}
+
+.todo-edit-form {
+    display: flex;
+    font-size: 1rem;
+    padding: .85em;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.todo-edit-form input {
+    flex: 1;
+}
+
+.todo-edit-form .save {
+    margin-left: .5em;
+}
+
+
+
+/* Todo form */
+.todo-add-form {
+    display: flex;
+    background-color: #FAFAFA;
+    border-top: 1px solid rgba(0,0,0,.1);
+    padding: 10px;
+}
+
+.todo-add-form input {
+    flex: 1;
+    outline: none;
+    transition: all .2s;
+}
+
+.todo-add-form input:focus {
+    border: 1px solid #764abc;
+}
+
+.todo-add-form button {
+    margin-left: 10px;
+}
+
+
+
+/* Animations */
+.slide-enter {
+    transform: translateX(-100%);
+}
+
+.slide-enter.slide-enter-active {
+    transform: translateX(0);
+    transition: all .5s;
+}
+
+.slide-leave {
+    transform: translateX(0);
+}
+
+.slide-leave.slide-leave-active {
+    transform: translateX(100%);
+    transition: all .5s;
+}
+
+.slide-appear {
+    opacity: 0;
+}
+
+.slide-appear.slide-appear-active {
+    opacity: 1;
+    transition: all .5s;
+}
