@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+}
+
+#root {
+    height: 100vh;
+    display: flex;
+}
+
+.counter {
+    margin: auto;
+    color: white;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.counter .count {
+    text-align: center;
+    font-size: 7rem;
+    font-family: monospace;
+}
+
+.counter .buttons {
+    display: flex;
+}
+
+.counter .buttons button {
+    flex: 1;
+    font-size: 2rem;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #764abc;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.counter .buttons button:hover {
+    background-color: #603c98;
+}
+
+.counter .buttons button:active {
+    background-color: #4e317d;
+}
+
+.counter input {
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    font-family: monospace;
+    border: none;
+    outline: none;
+    margin: 5px;
+    font-size: 2rem;
+}
