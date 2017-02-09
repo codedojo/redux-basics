@@ -2,7 +2,11 @@
 
 Исходный код для курса "Основы Redux"
 
----
+## Знакомство с Redux
+
+```bash
+git checkout redux-intro
+```
 
 ## Использование Redux
 
