@@ -13,3 +13,9 @@ git checkout redux-intro
 ```bash
 git checkout using-redux
 ```
+
+## Дабавление фильтра
+
+```bash
+git checkout adding-filter
+```
