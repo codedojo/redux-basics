@@ -28,8 +28,8 @@ class Stopwatch extends React.Component {
 
     tick() {
         if (this.state.running) {
-            let now = Date.now();
-            let diff = now - this.state.lastTick;
+            const now = Date.now();
+            const diff = now - this.state.lastTick;
 
             this.setState({
                 elapsed: this.state.elapsed + diff,
@@ -58,15 +58,15 @@ class Stopwatch extends React.Component {
     }
 
     format(milliseconds) {
-        let totalSeconds = Math.floor(milliseconds / 1000);
-        let minutes = Math.floor(totalSeconds / 60);
-        let seconds = totalSeconds % 60;
+        const totalSeconds = Math.floor(milliseconds / 1000);
+        const minutes = Math.floor(totalSeconds / 60);
+        const seconds = totalSeconds % 60;
 
         return `${minutes > 9 ? minutes : '0' + minutes}:${seconds > 9 ? seconds : '0' + seconds}`;
     }
 
     render() {
-        let time = this.format(this.state.elapsed);
+        const time = this.format(this.state.elapsed);
 
         return (
             <section className="stopwatch">
