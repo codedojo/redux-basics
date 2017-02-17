@@ -31,7 +31,7 @@ class App extends React.Component {
             completed: false
         };
 
-        let todos = [...this.state.todos, todo];
+        const todos = [...this.state.todos, todo];
 
         this.setState({ todos });
     }
