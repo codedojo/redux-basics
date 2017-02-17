@@ -1,9 +1,9 @@
 import React from 'react';
 
 function Stats(props) {
-    let total = props.todos.length;
-    let completed = props.todos.filter(todo => todo.completed).length;
-    let uncompleted = total - completed;
+    const total = props.todos.length;
+    const completed = props.todos.filter(todo => todo.completed).length;
+    const uncompleted = total - completed;
 
     return (
         <table className="stats">
