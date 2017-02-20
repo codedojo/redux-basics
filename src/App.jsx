@@ -37,30 +37,36 @@ class App extends React.Component {
     }
 
     handleDelete(id) {
-        const todos = this.state.todos.filter(todo => todo.id !== id);
-
+        const index = this.state.todos.findIndex(todo => todo.id === id);
+        const todos = [
+            ...this.state.todos.slice(0, index),
+            ...this.state.todos.slice(index + 1)
+        ];
+        
         this.setState({ todos });
     }
 
     handleToggle(id) {
         const todos = this.state.todos.map(todo => {
-            if (todo.id === id) {
-                todo.completed = !todo.completed;
+            if (todo.id !== id) {
+                return todo;
             }
 
-            return todo;
+            return Object.assign({}, todo, {
+                completed: !todo.completed
+            });
         });
 
         this.setState({ todos });
     }
 
     handleEdit(id, title) {
-        const todos = this.state.todos.map(todo => {
-            if (todo.id === id) {
-                todo.title = title;
-            }
-
+        if (todo.id !== id) {
             return todo;
+        }
+
+        return Object.assign({}, todo, {
+            title: title
         });
 
         this.setState({ todos });
