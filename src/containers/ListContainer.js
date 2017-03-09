@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
 
 import { deleteTodo, toggleTodo, editTodo } from '../actions';
+import { getFilteredTodos } from '../reducers';
 import List from '../components/List';
 
 function mapStateToProps(state) {
     return {
-        todos: state
+        todos: getFilteredTodos(state)
     };
 }
 
