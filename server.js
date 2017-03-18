@@ -9,7 +9,7 @@ const todos = require('./api/todos');
 
 const app = express();
 
-let nextId = 4;
+let nextId = 5;
 
 app.set('port', (process.env.PORT || 3000));
 

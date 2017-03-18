@@ -291,3 +291,8 @@ header h1 {
     opacity: 1;
     transition: all .5s;
 }
+
+.loading {
+    text-align: center;
+    padding: 1em;
+}

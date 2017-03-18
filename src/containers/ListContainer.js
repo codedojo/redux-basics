@@ -6,7 +6,8 @@ import List from '../components/List';
 
 function mapStateToProps(state) {
     return {
-        todos: getFilteredTodos(state)
+        todos: getFilteredTodos(state),
+        fetching: state.fetching
     };
 }
 
