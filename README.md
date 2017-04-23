@@ -19,3 +19,9 @@ git checkout using-redux
 ```bash
 git checkout adding-filter
 ```
+
+## Взаимодействие с сервером
+
+```bash
+git checkout async
+```
