@@ -61,12 +61,14 @@ class App extends React.Component {
     }
 
     handleEdit(id, title) {
-        if (todo.id !== id) {
-            return todo;
-        }
+        const todos = this.state.todos.map(todo => {
+            if (todo.id !== id) {
+                return todo;
+            }
 
-        return Object.assign({}, todo, {
-            title: title
+            return Object.assign({}, todo, {
+                title: title
+            });
         });
 
         this.setState({ todos });
