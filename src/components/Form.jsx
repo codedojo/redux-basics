@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Button from './Button';
 
@@ -32,6 +33,8 @@ class Form extends React.Component {
     }
 
     render() {
+        const disabled = !this.state.title;
+        
         return (
             <form className="todo-add-form" onSubmit={this.handleSubmit}>
                 <input
@@ -40,14 +43,14 @@ class Form extends React.Component {
                     placeholder="Что нужно сделать?"
                     onChange={this.handleChange} />
                     
-                <Button type="submit">Добавить</Button>
+                <Button type="submit" disabled={disabled}>Добавить</Button>
             </form>
         );
     }
 }
 
 Form.propTypes = {
-    onAdd: React.PropTypes.func.isRequired
+    onAdd: PropTypes.func.isRequired
 };
 
 export default Form;
