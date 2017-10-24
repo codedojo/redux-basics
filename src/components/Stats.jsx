@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Stats(props) {
     const total = props.todos.length;
@@ -26,10 +27,10 @@ function Stats(props) {
 }
 
 Stats.propTypes = {
-    todos: React.PropTypes.arrayOf(React.PropTypes.shape({
-        id: React.PropTypes.number.isRequired,
-        title: React.PropTypes.string.isRequired,
-        completed: React.PropTypes.bool.isRequired
+    todos: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        title: PropTypes.string.isRequired,
+        completed: PropTypes.bool.isRequired
     })).isRequired
 };
 
