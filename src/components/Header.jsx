@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import Stats from './stats';
-import Stopwatch from './stopwatch';
+import Stats from './Stats';
+import Stopwatch from './Stopwatch';
 
 function Header(props) {
     return (
@@ -14,7 +15,7 @@ function Header(props) {
 }
 
 Header.propTypes = {
-    todos: React.PropTypes.array.isRequired
+    todos: PropTypes.array.isRequired
 };
 
 export default Header;
