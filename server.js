@@ -11,7 +11,7 @@ const app = express();
 
 let nextId = 5;
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
@@ -66,15 +66,6 @@ app.delete('/api/todos/:id', (req, res) => {
     todos.splice(index, 1);
 
     res.sendStatus(204);
-});
-
-app.get('*', (req, res) => {
-    fs.readFile(`${__dirname}/public/index.html`, (error, html) => {
-        if (error) throw error;
-
-        res.setHeader('Content-Type', 'text/html');
-        res.end(html);
-    });
 });
 
 app.listen(app.get('port'), () => console.log(`Server is listening: http://localhost:${app.get('port')}`));

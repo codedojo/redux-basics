@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Button from './Button';
 
@@ -9,8 +10,6 @@ class Form extends React.Component {
         this.state = {
             title: ''
         };
-
-        this.store = this.props.store;
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -51,7 +50,7 @@ class Form extends React.Component {
 }
 
 Form.propTypes = {
-    onAdd: React.PropTypes.func.isRequired
+    onAdd: PropTypes.func.isRequired
 };
 
 export default Form;

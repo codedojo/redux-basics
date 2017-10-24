@@ -1,31 +1,24 @@
 {
-  "name": "react-redux",
+  "name": "redux-basics",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
-    "start": "webpack-dev-server --inline --hot --content-base ./public",
-    "build": "webpack -p"
-  },
-  "babel": {
-    "presets": [
-      "es2015",
-      "react"
-    ]
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "api": "node server"
   },
   "dependencies": {
-    "react": "15.4.2",
-    "react-dom": "15.4.2",
-    "react-redux": "5.0.2",
-    "redux": "3.6.0"
+    "axios": "~0.17.0",
+    "prop-types": "~15.6.0",
+    "react": "~16.0.0",
+    "react-dom": "~16.0.0",
+    "react-redux": "~5.0.6",
+    "react-scripts": "~1.0.14",
+    "redux": "~3.7.2",
+    "redux-promise": "~0.5.3",
+    "redux-thunk": "~2.2.0"
   },
-  "devDependencies": {
-    "babel-core": "6.22.0",
-    "babel-loader": "6.2.10",
-    "babel-preset-es2015": "6.22.0",
-    "babel-preset-react": "6.22.0",
-    "body-parser": "1.17.1",
-    "express": "4.15.2",
-    "react-hot-loader": "1.3.1",
-    "webpack": "2.2.1",
-    "webpack-dev-server": "2.3.0"
-  }
+  "proxy": "http://localhost:5000"
 }
