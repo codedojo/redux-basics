@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Header from './components/Header';
 import List from './components/List';
@@ -95,10 +96,10 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-    initialData: React.PropTypes.arrayOf(React.PropTypes.shape({
-        id: React.PropTypes.number.isRequired,
-        title: React.PropTypes.string.isRequired,
-        completed: React.PropTypes.bool.isRequired
+    initialData: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        title: PropTypes.string.isRequired,
+        completed: PropTypes.bool.isRequired
     })).isRequired
 };
 
