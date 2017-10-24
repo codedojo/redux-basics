@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Todo from './Todo';
 
@@ -21,14 +22,14 @@ function List(props) {
 }
 
 List.propTypes = {
-    todos: React.PropTypes.arrayOf(React.PropTypes.shape({
-        id: React.PropTypes.number.isRequired,
-        title: React.PropTypes.string.isRequired,
-        completed: React.PropTypes.bool.isRequired
+    todos: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        title: PropTypes.string.isRequired,
+        completed: PropTypes.bool.isRequired
     })).isRequired,
-    onDelete: React.PropTypes.func.isRequired,
-    onToggle: React.PropTypes.func.isRequired,
-    onEdit: React.PropTypes.func.isRequired
+    onDelete: PropTypes.func.isRequired,
+    onToggle: PropTypes.func.isRequired,
+    onEdit: PropTypes.func.isRequired
 };
 
 export default List;

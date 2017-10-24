@@ -26,6 +26,9 @@ function todoReducer(state = {}, action) {
             return Object.assign({}, state, {
                 title: action.title
             });
+
+        default:
+            return state;
     }
 }
 
@@ -63,5 +66,8 @@ export function getFilteredTodos(state, filter) {
 
         case 'UNCOMPLETED':
             return state.filter(todo => !todo.completed);
+
+        default:
+            return state;
     }
 }

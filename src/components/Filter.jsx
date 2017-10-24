@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import FilterLink from './FilterLink';
 
@@ -27,8 +28,8 @@ function Filter(props) {
 }
 
 Filter.propTypes = {
-    activeFilter: React.PropTypes.string.isRequired,
-    onSetFilter: React.PropTypes.func.isRequired
+    activeFilter: PropTypes.string.isRequired,
+    onSetFilter: PropTypes.func.isRequired
 };
 
 export default Filter;
