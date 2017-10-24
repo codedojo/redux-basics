@@ -1,20 +1,17 @@
 {
-  "name": "redux-intro",
+  "name": "redux-basics",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
-    "start": "webpack-dev-server --inline --content-base ./public",
-    "build": "webpack -p"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
-    "react": "15.4.2",
-    "react-dom": "15.4.2"
-  },
-  "devDependencies": {
-    "babel-core": "6.21.0",
-    "babel-loader": "6.2.10",
-    "babel-preset-es2015": "6.22.0",
-    "babel-preset-react": "6.22.0",
-    "webpack": "2.2.1",
-    "webpack-dev-server": "2.3.0"
+    "prop-types": "~15.6.0",
+    "react": "~16.0.0",
+    "react-dom": "~16.0.0",
+    "react-scripts": "~1.0.14"
   }
 }
