@@ -1,8 +1,8 @@
-import { REQUEST_TODOS, GET_TODOS } from '../actions';
+import { GET_TODOS } from '../actions';
 
 function reducer(state = false, action) {
     switch (action.type) {
-        case REQUEST_TODOS:
+        case `${GET_TODOS}_REQUEST`:
             return true;
 
         case GET_TODOS:

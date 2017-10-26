@@ -63,9 +63,9 @@ app.delete('/api/todos/:id', (req, res) => {
     
     if (index === -1) return res.sendStatus(404);
 
-    todos.splice(index, 1);
+    let [todo] = todos.splice(index, 1);
 
-    res.sendStatus(204);
+    res.json(todo);
 });
 
 app.listen(app.get('port'), () => console.log(`Server is listening: http://localhost:${app.get('port')}`));

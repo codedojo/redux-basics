@@ -3,18 +3,18 @@ import { GET_TODOS, ADD_TODO, DELETE_TODO, EDIT_TODO, TOGGLE_TODO } from '../act
 function todoReducer(state = {}, action) {
     switch (action.type) {
         case TOGGLE_TODO:
-            if (state.id !== action.todo.id) {
+            if (state.id !== action.data.id) {
                 return state;
             }
 
-            return action.todo;
+            return action.data;
 
         case EDIT_TODO:
-            if (state.id !== action.todo.id) {
+            if (state.id !== action.data.id) {
                 return state;
             }
 
-            return action.todo;
+            return action.data;
 
         default:
             return state;
@@ -24,13 +24,13 @@ function todoReducer(state = {}, action) {
 export default function reducer(state = [], action) {
     switch (action.type) {
         case GET_TODOS:
-            return action.todos;
+            return action.data;
 
         case ADD_TODO:
-            return [...state, action.todo];
+            return [...state, action.data];
 
         case DELETE_TODO:
-            const index = state.findIndex(todo => todo.id === action.id);
+            const index = state.findIndex(todo => todo.id === action.data.id);
 
             return [
                 ...state.slice(0, index),
