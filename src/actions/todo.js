@@ -33,9 +33,10 @@ export function addTodo(title) {
 
 export function deleteTodo(id) {
     return axios.delete(`api/todos/${id}`)
-        .then(response => ({
+        .then(response => response.data)
+        .then(todo => ({
             type: DELETE_TODO,
-            id
+            todo
         }));
 }
 
