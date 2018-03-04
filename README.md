@@ -8,8 +8,6 @@
 git checkout redux-intro
 ```
 
----
-
 ## Использование Redux
 
 Начало:
@@ -22,8 +20,6 @@ git checkout using-redux
 git checkout using-redux_end
 ```
 
----
-
 ## Дабавление фильтра
 
 Начало:
@@ -35,8 +31,6 @@ git checkout adding-filter
 ```sh
 git checkout adding-filter_end
 ```
-
----
 
 ## Взаимодействие с сервером
 
